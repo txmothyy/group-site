@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Legendary Squad</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #2c3e50);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00f5d4;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f5d4;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.hero a {
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: #00f5d4;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero a:hover {
+    transform: scale(1.1);
+}
+
+/* MEMBERS SECTION */
+#members {
+    padding: 100px 50px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.0);
+}
+
+.card h3 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    margin-top: 8px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.6;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+#musicButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 245, 212, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid #00f5d4;
+    color: #00f5d4;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+#musicButton:hover {
+    background: rgba(0, 245, 212, 0.4);
+    transform: scale(1.1);
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <h1>The Union</h1>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#members">Members</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h2>Meet The Dodongs 🚀</h2>
+    <p>Eight minds. One unstoppable union.</p>
+    <a href="#members">View Members</a>
+</section>
+
+<section id="members">
+    <h2 class="section-title">Our Members</h2>
+    <div class="container">
+
+        <div class="card">
+            <img src="images/james.jpg" alt="James">
+            <h3>James</h3>
+            <p>"Don't listen to them, cause what do they know."</p>
+        </div>
+
+        <div class="card">
+            <img src="friend2.jpg" alt="Gian">
+            <h3>Gian</h3>
+            <p>"?"</p>
+        </div>
+
+        <div class="card">
+            <img src="images/leo.jpg" alt="Leo">
+            <h3>Leo</h3>
+            <p>"Mag mahal ng isa, wag lang dalawa."</p>
+        </div>
+
+        <div class="card">
+            <img src="friend4.jpg" alt="Jhon Lhoyd">
+            <h3>Jhon Lhoyd</h3>
+            <p>"?"</p>
+        </div>
+
+        <div class="card">
+            <img src="friend5.jpg" alt="Knight">
+            <h3>Knight</h3>
+            <p>"?"</p>
+        </div>
+
+        <div class="card">
+            <img src="isaiah.jpg" alt="Isaiah">
+            <h3>Isaiah</h3>
+            <p>"?"</p>
+        </div>
+
+        <div class="card">
+            <img src="images/jath.jpg" alt="Jathnielle">
+            <h3>Jathnielle</h3>
+            <p>"Keep grinding, keep pushing until you succeed in life and don't forget God. Ang BANGIS!"</p>
+        </div>
+
+        <div class="card">
+            <img src="friend7.jpg" alt="Enzo">
+            <h3>Enzo</h3>
+            <p>"?"</p>
+        </div>
+
+        <div class="card">
+            <img src="friend8.jpg" alt="Adi">
+            <h3>Adi</h3>
+            <p>"?"</p>
+        </div>
+
+        <div class="card">
+            <img src="friend9.jpg" alt="Jairus">
+            <h3>Jairus</h3>
+            <p>"?"</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 The IETI Dodong Union | RTG
+</footer>
+
+
+<button id="musicButton" onclick="document.getElementById('bgMusic').play()">
+    🎵 Play Music
+</button>
+
+<audio id="bgMusic" loop>
+    <source src="assets/music.webm" type="audio/webm">
+</audio>
+
+</body>
+</html>
